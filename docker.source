@@ -29,12 +29,7 @@ function dlf {
 }
 
 function dps {
-    if [ -z "$@" ]
-    then
-	    docker ps | awk '{ print $NF }' | tail -n +2
-    else
-	    docker ps | awk '{ print $NF }' | tail -n +2 | grep --color=always -i $@
-    fi
+    docker ps
 }
 
 function de {
